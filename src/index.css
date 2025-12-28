@@ -1,0 +1,225 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Tahoma, Arial, sans-serif; background: #f0f4f8; }
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #e3e9f0;
+}
+
+.resume {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  direction: rtl;
+}
+
+.sidebar {
+  width: 320px;
+  background: #e8f0fe;
+  padding: 30px 25px;
+  color: #2c3e50;
+  position: relative;
+}
+
+.photo-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 25px;
+  border: 6px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.photo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  color: #1976d2;
+  margin: 25px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #bbdefb;
+}
+
+.info-list {
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+.info-list li span {
+  color: #1565c0;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.languages .lang-item {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.languages strong {
+  color: #1976d2;
+}
+
+.skills-container h4.skill-level {
+  margin: 18px 0 10px;
+  color: #1976d2;
+  font-size: 0.95rem;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  background: #bbdefb;
+  color: #1565c0;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid #90caf9;
+}
+
+.footer-logo {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  background: white;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #1976d2;
+  margin-bottom: 8px;
+}
+
+.header h2 {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.header-meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 20px;
+}
+
+.header-meta span {
+  margin-left: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  color: #1976d2;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #bbdefb;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.job-header h4 {
+  color: #1565c0;
+  font-size: 1.15rem;
+}
+
+.period {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.company {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.tasks {
+  margin-right: 20px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.edu-item h4 {
+  color: #1565c0;
+  margin-bottom: 5px;
+}
+
+/* Print */
+@media print {
+  body, .page-container { background: white; padding: 0; }
+  .resume { box-shadow: none; }
+}
+
+.download-btn-container {
+  text-align: center;
+  padding: 20px;
+  background: #f8fbff;
+}
+
+.download-btn {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+  transition: all 0.3s;
+}
+
+.download-btn:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+/* مهم برای PDF - لوگو در پایین صفحه درست نمایش داده بشه */
+.footer-logo img {
+  filter: brightness(0) invert(0); /* در صورت نیاز */
+}
+
+/* برای PDF بهتر بشه */
+@media print {
+  .download-btn-container { display: none !important; }
+  body { background: white; }
+  .page-container { padding: 0; align-items: flex-start; }
+}
